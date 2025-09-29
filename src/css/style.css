@@ -512,15 +512,33 @@ gap: 30px;
     font-weight: 400;
     font-size: 20px;
     line-height: 100%;
+    @media screen and (max-width: 1024px) {
+        font-size: 16px;
+    }
+    @media screen and (max-width: 768px) {
+        padding: 30px var(--footer-padding-inline) 40px var(--footer-padding-inline);
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 30px;
+    }
+    @media screen and (max-width: 375px) {
+        align-items: center;
+    }
 }
 
 .footer__addr {
     font-style: normal;
+    @media screen and (max-width: 375px) {
+        order: 3;
+    }
 }
 
 .footer__tel {
     color: var(--light-color);
     text-decoration: none;
+    @media screen and (max-width: 375px) {
+        order: 2;
+    }
 }
 
 .footer__social {
@@ -544,5 +562,8 @@ gap: 30px;
                 height: 22px;
             }
         }
+    }
+    @media screen and (max-width: 1024px) {
+        column-gap: 27px;
     }
 }
